@@ -6,7 +6,7 @@ public class BreakContinue {
         while (i < 10) {
             if (i == 4){
                 i++;
-                continue;
+                continue; //  tao vong lap moi bat dau tu 5.
             }
             System.out.println(i);
             i++;

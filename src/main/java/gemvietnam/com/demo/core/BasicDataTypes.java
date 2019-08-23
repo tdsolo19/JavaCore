@@ -13,6 +13,8 @@ public class BasicDataTypes {
 
       // Reference Datatypes
     BasicDataTypes obj = new BasicDataTypes();
+    String a = "hhhhhh";
+    int[] number = {0, 1, 2};
     // Default is null
 
 }
