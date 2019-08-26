@@ -1,4 +1,4 @@
-package LearnString;
+package string;
 
 public class StringBufferTest {
 

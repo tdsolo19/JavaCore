@@ -1,4 +1,4 @@
-package LearnString;
+package string;
 
 public class Substring {
     public static void main(String[] args) {
