@@ -6,6 +6,11 @@ public class Honda extends Bike {
         System.out.println("toc do ban tho");
     }
 
+    @Override
+    void run1() {
+        System.out.println("toc do con rua");
+    }
+
     public static void main(String[] args) {
         Bike obj = new Honda();
         obj.run();

@@ -8,11 +8,6 @@ import java.util.Scanner;
 public class Action {
     private static ArrayList val = new ArrayList();
 
-    public static void arr() {
-        val.add(scr());
-        System.out.println(val);
-    }
-
     public static void print() {
         System.out.println("1. ADD BOOK");
         System.out.println("2. Edit BOOK");
@@ -26,14 +21,18 @@ public class Action {
         Scanner info = new Scanner(System.in);
         System.out.println("Nhap IdBook");
         obj.setIdBook(info.next());
+        //val.add(obj.getIdBook());
         System.out.println("Nhap NameBook");
         obj.setNameBook(info.next());
+        //val.add(obj.getNameBook());
         info.nextLine();
         System.out.println("Nhap PrimeBook");
         obj.setPrimeBook(info.nextDouble());
+        //val.add(obj.getPrimeBook());
+        val.add(obj.getIdBook() + " " + obj.getNameBook()+ " " + obj.getPrimeBook());
         return obj.getIdBook() + " " + obj.getNameBook()+ " " + obj.getPrimeBook();
-    }
 
+    }
 
     public static void choice() {
         int i = 0;
@@ -49,12 +48,14 @@ public class Action {
                     break;
 
                 case 2:
+                    System.out.println("Nhap ID Name Prime muon thay doi");
                     Scanner id = new Scanner(System.in);
                     String tss = id.nextLine();
                     int size = val.size();
                     for (int a = 0; a <size; a++ ) {
-                        String b = (String) val.get(a);
-                        if (b.contains(tss)) {
+                        String str = (String)val.get(a);
+                        System.out.println(str.substring(0,3));
+                        if (str.substring(0,3).equals(tss) ) {
                             val.remove(a);
                             scr();
                         } else {
@@ -65,7 +66,8 @@ public class Action {
                     break;
 
                     case 3:
-                         arr() ;
+                        System.out.println(val);
+                        System.out.println(val.size());
                         print();
                         break;
                     case 4:
@@ -74,19 +76,14 @@ public class Action {
                     default:
                         System.out.println("Chon can than lai di");
                         print();
-
                 }
 
 
             }
         }
-
         public static void main (String[]args){
-
             print();
             choice();
-
-
         }
     }
 

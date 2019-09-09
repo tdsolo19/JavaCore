@@ -3,7 +3,7 @@ package gemvietnam.com.demo.core.inheritance;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class PeopleTest extends Manager {
+public class PeopleTest {
     public static void main(String[] args) {
 
         Person person1 = new Person("TDsolo","22/12/1992");
